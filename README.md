@@ -5,7 +5,7 @@ This is the home page for the cleveland unit of the Navy Sea Cadets. [WebHost](h
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
+  - [The Purpose](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
