@@ -66,50 +66,10 @@ Users should be able to:
 
 ### What I learned
 
-I learned you have to set the width of the paragraph element to a specific px. Or when you generate the quote the added space will mess up css.
-Also, you can set flexbox on the body to make sure everything is either in rows or columns to your specifications with out alot of guess work.
-Also, i used Axios (npm) for the api fetch. I feel it works better for me, and javascript promises. it is a library that is good to work with and get familar with for client side node.js work.
+1. How to insert a image of anything into the title in the head.
 
-This code centers the container, and makes sure the elements are stacked.
-
-```css
-body {
-  background-color: hsl(218, 23%, 16%);
-  font-family: 'Manrope';
-  font-size: 18px;
-  height: 94vh;
-  display: flex;
-  flex-direction: column;
-}
 ```
-
-This Css below sets up the quote body and sets a width on the quote body to stay put and not expand.
-
-```css
-#quote {
-  font-weight: 800;
-  margin: 0;
-  text-align: center;
-  width: 295px;
-}
-```
-
-This is the axios code that i used to pull the api request. I like it becuase it is short and sweet,and not alot of lines of code.
-
-```js
-const digit = document.getElementById('digits');
-const quote = document.getElementById('quote');
-const generate = document.querySelector('.btn');
-const adviceQuote = async () => {
-  const res = await axios.get('https://api.adviceslip.com/advice');
-  try {
-    digit.textContent = res.data.slip.id;
-    quote.textContent = `"${res.data.slip.advice}"`;
-  } catch (e) {
-    console.log('error', e);
-  }
-};
-generate.addEventListener('click', adviceQuote);
+<link rel="shortcut icon" href="./images/CLE DIV Logo.png">
 ```
 
 ### Continued development
