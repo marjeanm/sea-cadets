@@ -1,0 +1,134 @@
+/* universal responsive actions */
+* {
+  box-sizing: border-box;
+}
+
+/* creating a flex tp the HTML body to have a column layout.  */
+body {
+  margin: 0;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+/*GRID SECTION this is mobile first 320px to 600px*/
+.grid {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-auto-columns: auto;
+  grid-auto-rows: auto;
+  justify-items: center;
+}
+
+.Home {
+  grid-area: header;
+}
+.main {
+  grid-area: main;
+}
+.footer {
+  grid-area: footer;
+}
+
+/* flexbox */
+#Home {
+  display: flex;
+  width: 90vw;
+  flex-direction: column;
+}
+
+.social {
+  display: flex;
+  justify-content: space-around;
+}
+.top-unit-location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gallery-Container {
+  display: flex;
+  width: 25vw;
+  justify-content: center;
+  align-items: center;
+}
+/* indivual element styling */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* image size */
+.logo {
+  width: 299px;
+}
+.cod-image,
+.sea-cimage,
+.volunteer {
+  width: 90vw;
+}
+
+/* section styling  */
+#Home {
+  width: 90vw;
+}
+#main {
+  width: 90vw;
+  margin: auto;
+  text-align: justify;
+}
+#footer {
+  width: 90vw;
+  margin: auto;
+}
+/* images photo gallery */
+.img1 {
+  background-image: url('../images/DSCF2970.JPG');
+}
+.img2 {
+  background-image: url('../images/DSCF2988.JPG');
+}
+.img3 {
+  background-image: url('../images/DSCF3090.JPG');
+}
+.img4 {
+}
+.img5 {
+}
+.img6 {
+}
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  width: 25vw;
+  border-radius: 50px;
+  flex: 0.5;
+  color: white;
+  margin-right: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+/* media queries  */
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+    margin: 5px;
+  }
+  .panel:nth-child(4),
+  .panel:nth-child(5) {
+    display: none;
+  }
+}
