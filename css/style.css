@@ -32,6 +32,10 @@ font-face {
 }
 
 /* creating a flex tp the HTML body to have a column layout.  */
+body,
+html {
+  height: 100%;
+}
 body {
   margin: 0;
   display: flex;
@@ -79,14 +83,6 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.gallery-Container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 25px;
-}
 
 .form-flex {
   display: flex;
@@ -99,16 +95,50 @@ body {
 }
 .footer-top {
   display: flex;
-  width: 100%;
-  align-items: baseline;
+  justify-content: space-around;
 }
-.footer-links {
+section.social-footer {
   display: flex;
   flex-direction: column;
-  width: 61%;
-  margin-right: 42px;
-  height: 19vh;
+  align-items: center;
+}
+.mission {
+  width: 50%;
+}
+section.footer-contact {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-end;
+  align-content: center;
+  text-align: end;
+}
+.copyright {
+  font-size: 10px;
+}
+
+ul.footer-links {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  height: 26vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.social {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
+  align-content: flex-end;
+}
+.header-footer-contact {
+  display: flex;
+  justify-content: flex-end;
 }
 .training-ops {
   display: flex;
@@ -142,6 +172,8 @@ input {
 .contact-me-form {
   border: 5px double #f7941e;
   padding: 25px;
+  max-width: 98%;
+  margin: auto;
 }
 .mission {
   display: flex;
@@ -229,8 +261,14 @@ h2 {
   height: 50%;
 }
 .cod-image-letter {
-  margin-top: 24px;
-  width: 90vw;
+  width: 50vw;
+  margin-top: 25px;
+}
+.intro-banner {
+  text-align: center;
+  margin: 0;
+  background-color: #808285;
+  font-size: 22px;
 }
 
 .compass {
@@ -247,7 +285,7 @@ h2 {
   text-align: justify;
 }
 #footer {
-  width: 90vw;
+  width: 100%;
   margin: auto;
 }
 .footer-contact-address {
@@ -277,71 +315,142 @@ section.social-footer {
   justify-content: center;
   align-items: center;
 }
+.about-text {
+  width: 90vw;
+  margin: auto;
+}
+.about-text h3 {
+  text-align: center;
+}
+figure,
+blockquote {
+  margin: 0;
+}
+.chart-course-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .join-us-header img {
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
+  padding: 15px;
+  border-radius: 25px;
 }
 .join-us-container {
   display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: center;
+  gap: 1em;
+  align-items: center;
 }
 .join-us-card {
   margin: 10px;
   overflow: hidden;
-  width: 300px;
+  flex: 33.33%;
+  border-radius: 25px;
+  box-shadow: 5px 1px 15px 0px rgba(0, 0, 0, 0.6);
 }
+
 .join-us-body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0px 15px 15px 15px;
+}
+.join-us-body p {
+  margin: 0;
 }
 
 /* images photo gallery */
 .uss-cod {
-  background-image: url('../images/DSCF2353.JPG');
+  background-image: url('../images/DSCF2405.JPG');
 }
-.img1 {
-  background-image: url('../images/DSCF2970.JPG');
-}
-.img2 {
-  background-image: url('../images/DSCF2988.JPG');
-}
-.img3 {
-  background-image: url('../images/DSCF3090.JPG');
-}
-.img4 {
-  background-image: url('../images/DSCF3098.JPG');
-}
-.img5 {
-  background-image: url('../images/DSCF3104.JPG');
-}
-.img6 {
-  background-image: url('../images/DSCF3226.JPG');
-}
+
 .intro-image {
-  background-size: cover;
+  height: 50vh;
+  width: 90vw;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  width: 90vw;
-  height: 50vh;
-  border-radius: 26px;
-}
-
-.panel {
   background-size: cover;
-
-  min-height: 200px;
-  width: 100%;
-
-  transition: flex 0.7s ease-in;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
 }
-.FAQ-wrappper {
+
+.intro-banner {
+  position: relative;
+  bottom: 12px;
+}
+.gallery-Container {
+  margin: auto;
+}
+.splide {
+  margin: 0 auto;
+}
+
+.thumbnails {
   display: flex;
-  align-items: center;
+  margin: 1rem auto 0;
+  padding: 0;
   justify-content: center;
+}
+
+.thumbnail {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  list-style: none;
+  margin: 0 0.2rem;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.thumbnail.is-active {
+  opacity: 1;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: auto;
+}
+
+.faq {
+  width: 80%;
+  max-width: 600px;
+  margin: 50px auto;
+}
+button.collapse {
+  width: 100%;
+  background-color: #003662;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+  color: #f7941e;
+}
+
+.collapse:after {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.collapse:after {
+  font: var(--fa-font-solid);
+  content: '\f107';
+  float: right;
+}
+.is-open:after {
+  font: var(--fa-font-solid);
+  content: '\f106';
+  float: right;
+}
+.faq-text {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 3s;
 }
 
 /* colors */
@@ -353,35 +462,48 @@ footer {
   font-size: 14px;
   padding: 10px;
 }
-
-/* .intro-image { */
-/* background-size: cover; */
-/* background-position: center; */
-/* background-repeat: no-repeat; */
-/* width: 90vw; */
-/* height: 90vh; */
-/* } */
-/* media queries  */
-@media (max-width: 480px) {
-  .gallery-Container {
-    width: 90vw;
+@media (max-width: 768px) {
+  .intro-image {
+    background-attachment: scroll;
+  }
+  input {
+    width: 40vw;
+  }
+  .join-us-container {
     flex-direction: column;
   }
 }
-/* @media (min-width: 600px) { */
-/* .panel { */
-/* width: 80vw; */
-/* } */
-/* } */
-/* @media (min-width: 625px) and (max-width: 900px) { */
-/* .panel { */
-/* min-height: 350px; */
-/* width: 43vw; */
-/* } */
-/* } */
-
-/* @media (min-width: 901px) { */
-/* .panel { */
-/* width: 28vw; */
-/* } */
-/* } */
+@media (min-width: 48em) {
+  .join-us-card {
+    flex-wrap: nowrap;
+  }
+  input {
+    width: 38vw;
+  }
+}
+@media (min-width: 1024px) {
+  input {
+    width: 17vw;
+  }
+  .contact-me-form {
+    max-width: 42%;
+  }
+  .links-container {
+    opacity: 1;
+    height: 15vh;
+  }
+  #navBar {
+    flex-direction: row;
+    height: 6vh;
+  }
+  .top-unit-location {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .order {
+    order: 1;
+  }
+  .fa-solid {
+    opacity: 0;
+  }
+}
