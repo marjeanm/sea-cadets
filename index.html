@@ -30,20 +30,16 @@
                     <!-- nav header -->
                     <div class="nav-header">
                         <!-- toggle -->
-                        <i class="fa-solid fa-bars"></i>
-
-
+                        <button class="nav-toggle">
+                            <i class="fa-solid fa-bars "></i>
+                        </button>
                     </div>
                     <!-- button goes here  -->
                     <!-- links container div -->
                     <div class="links-container">
 
                         <ul class="links" id="navBar">
-                            <li><a href="">About</a></li>
-                            <li><a href="">Join</a></li>
-                            <li><a href="">Directions </a></li>
-                            <li><a href="">Contact Us</a></li>
-                            <li><a href="">Media</a></li>
+
                         </ul>
                         <!-- <div class="social-header"> -->
                         <!-- <i class="fa-brands fa-facebook"></i> -->
@@ -80,7 +76,7 @@
             </div>
         </header>
         <main class="main" id="main">
-            <section class="about-section">
+            <section class="about-section About" id="About">
                 <div class="about-header">
                     <h2>Who we are</h2>
                 </div>
@@ -115,7 +111,7 @@
                 </div>
 
             </section>
-            <section class="join-us">
+            <section class="join-us Join" id="Join">
                 <div class="header-join">
                     <h2>Join</h2>
                     <!-- <p>the U.S. Naval Sea Cadet Corps (USNSCC) is a -->
@@ -123,7 +119,7 @@
                 </div>
                 <div class="join-us-container">
 
-                    <div class="join-us-card">
+                    <div class="join-us-card reveal ">
 
                         <div class="join-us-header">
                             <img src='./images/DSCF3265.JPG' alt=''>
@@ -136,7 +132,7 @@
                             <a href=""> learn More </a>
                         </div>
                     </div>
-                    <div class="join-us-card">
+                    <div class="join-us-card reveal ">
                         <div class="join-us-header">
                             <img src='./images/DSCF2353.JPG' alt=''>
                         </div>
@@ -148,7 +144,7 @@
                             <a href=""> learn More </a>
                         </div>
                     </div>
-                    <div class="join-us-card">
+                    <div class="join-us-card reveal ">
                         <div class="join-us-header">
                             <img src='./images/DSCF2353.JPG' alt=''>
                         </div>
@@ -162,7 +158,7 @@
                     </div>
                 </div>
             </section>
-            <section class="photoGallery">
+            <section class="photoGallery Gallery" id="Gallery">
                 <div class="photoGallery-header">
                     <h2>Our Recurits</h2>
                 </div>
@@ -205,7 +201,7 @@
 
                 </div>
             </section>
-            <section class="FAQ">
+            <section class="FAQ" id="FAQ">
                 <div class="FAQ-header">
                     <h2>Fequently Asked Questions </h2>
                 </div>
@@ -295,7 +291,7 @@
                 </section>
 
             </section>
-            <section class="contact-me" id="Contact">
+            <section class="contact-me" id="Contact" id="Contact Us">
 
                 <div class="contact-me-wrapper">
                     <div class="contact-div">
@@ -327,11 +323,6 @@
             <a href="#Home" class="scroll-link top-link">
                 <i class="fa-solid fa-circle-arrow-up fa-2x"></i>
             </a>
-
-
-
-
-
         </main>
         <footer class="footer" id="footer">
 
@@ -393,7 +384,7 @@
             </div>
         </footer>
     </container>
-    <script src="js/app.js"></script>
+
     <script src="js/splide.min.js"></script>
     <script>
         var splide = new Splide('#main-carousel', {
@@ -431,6 +422,7 @@
 
         splide.mount();
     </script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
