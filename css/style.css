@@ -82,6 +82,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 26px;
 }
 
 .form-flex {
@@ -187,9 +188,25 @@ ul {
   padding: 0;
   list-style-type: none;
 }
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+  box-shadow: 2.8px 2.8px 2.2px rgb(0 0 0 / 2%),
+    6.7px 6.7px 5.3px rgb(0 0 0 / 3%), 12.5px 12.5px 10px rgb(0 0 0 / 4%),
+    22.3px 22.3px 17.9px rgb(0 0 0 / 4%), 41.8px 41.8px 33.4px rgb(0 0 0 / 5%),
+    100px 100px 80px rgb(0 0 0 / 7%);
+}
 .links-container {
   height: 0;
   opacity: 0;
+  transition: all 3s;
 }
 .social i {
   margin-right: 10px;
@@ -325,6 +342,7 @@ section.social-footer {
 figure,
 blockquote {
   margin: 0;
+  text-align: center;
 }
 .chart-course-container {
   display: flex;
@@ -335,8 +353,6 @@ blockquote {
   width: 100%;
   height: 300px;
   object-fit: cover;
-  padding: 15px;
-  border-radius: 25px;
 }
 .join-us-container {
   display: flex;
@@ -347,7 +363,8 @@ blockquote {
   margin: 10px;
   overflow: hidden;
   flex: 33.33%;
-  border-radius: 25px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   box-shadow: 5px 1px 15px 0px rgba(0, 0, 0, 0.6);
 }
 
@@ -503,7 +520,7 @@ footer {
   .order {
     order: 1;
   }
-  .fa-solid {
+  .nav-toggle {
     opacity: 0;
   }
 }
