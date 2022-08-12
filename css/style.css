@@ -83,6 +83,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 26px;
+  font-size: 22px;
 }
 
 .form-flex {
@@ -105,6 +106,9 @@ section.social-footer {
 }
 .mission {
   width: 50%;
+}
+.faq > button {
+  font-size: 19px;
 }
 section.footer-contact {
   display: flex;
@@ -162,20 +166,53 @@ ul.footer-links {
   text-align: center;
 }
 textarea,
-input {
-  background-color: #192250;
-
+input[type='text'],
+input[type='email'] {
+  width: 79vw;
   border: 1px solid grey;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.3;
+  font-weight: bold;
+  font-size: 19px;
+  border-radius: 8px;
+
+  background-color: #d1d1d1;
 }
 .contact-me-form {
   border: 5px double #f7941e;
   padding: 25px;
-  max-width: 98%;
+  width: 93vw;
   margin: auto;
 }
+.white {
+  color: white;
+}
+.form-button {
+  padding: 15px;
+  width: 25vw;
+  margin-top: 15px;
+  border: none;
+  outline: none;
+  background-color: #003662;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1.3px;
+  -webkit-box-shadow: 5px 10px 15px 2px rgba(0, 0, 0, 0.89);
+  box-shadow: 5px 10px 15px 2px rgba(0, 0, 0, 0.89);
+}
+.form-button:hover {
+  background-color: #003058;
+}
+.form-button:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+.nav-toggle {
+  outline: none;
+  border: none;
+  padding: 25px;
+  margin-top: 15px;
+  background: none;
+}
+
 .mission {
   display: flex;
   flex-direction: column;
@@ -236,7 +273,6 @@ textarea {
   resize: none;
 }
 input {
-  width: 75%;
   margin-bottom: 10px;
   padding: 5px;
   height: 37px;
@@ -259,12 +295,12 @@ h2 {
 }
 /* image size */
 .logo {
-  width: 161px;
+  width: 300px;
   position: relative;
-  top: 10px;
-  border: 10px solid white;
+  top: 12px;
+  border: 18px solid white;
   padding: 0;
-  border-radius: 66px;
+  border-radius: 128px;
 }
 .cod-image,
 .sea-cimage,
@@ -438,14 +474,13 @@ blockquote {
 }
 button.collapse {
   width: 100%;
-  background-color: #003662;
+
   border: none;
   outline: none;
   text-align: left;
   padding: 15px 20px;
   cursor: pointer;
   transition: background-color 0.2s linear;
-  color: #f7941e;
 }
 
 .collapse:after {
@@ -468,6 +503,8 @@ button.collapse {
   max-height: 0;
   overflow: hidden;
   transition: all 3s;
+  font-size: 19px;
+  text-align: left;
 }
 
 /* colors */
@@ -479,17 +516,7 @@ footer {
   font-size: 14px;
   padding: 10px;
 }
-@media (max-width: 768px) {
-  .intro-image {
-    background-attachment: scroll;
-  }
-  input {
-    width: 40vw;
-  }
-  .join-us-container {
-    flex-direction: column;
-  }
-}
+
 @media (min-width: 48em) {
   .join-us-card {
     flex-wrap: nowrap;
@@ -498,16 +525,34 @@ footer {
     width: 38vw;
   }
 }
-@media (min-width: 1024px) {
+@media (max-width: 768px) {
+  .intro-image {
+    background-attachment: scroll;
+  }
+
   input {
-    width: 17vw;
+    width: 40vw;
+  }
+  .join-us-container {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1024px) {
+  textarea,
+  input[type='text'],
+  input[type='email'] {
+    width: 68vw;
   }
   .contact-me-form {
-    max-width: 42%;
+    width: 81vw;
+  }
+  .nav-header {
+    height: 0px;
   }
   .links-container {
     opacity: 1;
-    height: 15vh;
+    /* height: 15vh; */
   }
   #navBar {
     flex-direction: row;
