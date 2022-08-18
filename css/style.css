@@ -168,20 +168,19 @@ ul.footer-links {
 textarea,
 input[type='text'],
 input[type='email'] {
-  width: 79vw;
   border: 1px solid grey;
   font-weight: bold;
   font-size: 19px;
   border-radius: 8px;
-
   background-color: #d1d1d1;
 }
-.contact-me-form {
-  border: 5px double #f7941e;
-  padding: 25px;
-  width: 93vw;
-  margin: auto;
-}
+
+/* .contact-me-form { */
+/* border: 5px double #f7941e; */
+/* padding: 25px; */
+/* width: 93vw; */
+/* margin: auto; */
+/* } */
 .white {
   color: white;
 }
@@ -482,7 +481,11 @@ blockquote {
 .join-us-header.sea-cadets {
   background-image: url('../images/DSCF2353.JPG');
 }
-
+.half {
+  display: flex;
+  gap: 1em;
+  width: 50%;
+}
 .faq {
   width: 80%;
   max-width: 600px;
@@ -557,14 +560,10 @@ footer {
 }
 
 @media (min-width: 1024px) {
-  textarea,
-  input[type='text'],
-  input[type='email'] {
-    width: 68vw;
+  textarea {
+    width: 50%;
   }
-  .contact-me-form {
-    width: 81vw;
-  }
+
   .nav-header {
     height: 0px;
   }
