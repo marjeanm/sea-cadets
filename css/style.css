@@ -184,16 +184,18 @@ input[type='email'] {
 .white {
   color: white;
 }
+form {
+  font-size: 22px;
+}
 .form-button {
   padding: 15px;
-  width: 25vw;
+  width: 32vw;
   margin-top: 15px;
   border: none;
   outline: none;
   background-color: #003662;
   color: white;
   font-weight: bold;
-  letter-spacing: 1.3px;
   -webkit-box-shadow: 5px 10px 15px 2px rgba(0, 0, 0, 0.89);
   box-shadow: 5px 10px 15px 2px rgba(0, 0, 0, 0.89);
 }
