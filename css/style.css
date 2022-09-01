@@ -357,6 +357,9 @@ h2 {
 section.social-footer {
   width: 100%;
 }
+.center {
+  text-align: center;
+}
 .footer-links li a {
   font-weight: 800;
 }
